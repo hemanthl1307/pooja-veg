@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Pooja Veg</title>
+</head>
+<body>
+    <!-----------------NAVBAR-------------->
+    <nav>
+        <ul class="sidebar">
+            <li><a href="#">Pooja<i class="fa-solid fa-utensils"></i> Veg</a></li>
+            <li onclick="hideSidebar()"><a href="#" id="cross"><i class="fa-solid fa-xmark close-icon"></i></a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Catering</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a>
+                <select class="lan">
+                <option value="eng">ENG</option>
+                <option value="kan">KAN</option>
+                </select>
+                </a>
+            </li>
+        </ul>
+          <ul>
+            <li><a href="#">Pooja <i class="fa-solid fa-utensils"></i> Veg</a></li>
+            <li class="hideonMobile"><a href="#">Home</a></li>
+            <li class="hideonMobile"><a href="#">Menu</a></li>
+            <li class="hideonMobile"><a href="#">Catering</a></li>
+            <li class="hideonMobile"><a href="#">Contact</a></li>
+            <li class="menu-button" onclick="showsidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+            <li><a>
+                <select>
+                <option value="eng">ENG</option>
+                <option value="kan">KAN</option>
+                </select>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!------------------HERO SECTION------------>
+    <section class="hero">
+        <div class="hero-content">
+        </div>
+    </section>
+    <!------------------INFORMATION SECTION--------->
+    <section class="catering">
+    <div class="info">
+        <h1>Pooja Grand <br> Authentic Indian Catering</h1>
+        <h2>Bringing the rich flavors of tradition to your weddings, celebrations, and special occasions.</h2>
+        <p>Pooja Grand is a trusted name for pure vegetarian catering services in Bengaluru. With years of experience in serving authentic South Indian cuisine, we proudly cater to Weddings, Housewarming ceremonies, Corporate events, Birthday parties, Festivals, Religious functions, and Special family gatherings.
+We understand that every event is special. That’s why we offer carefully planned and customizable menus to suit your occasion, guest count, and budget. From traditional Karnataka-style meals served on banana leaves to modern buffet arrangements, we ensure quality, taste, and presentation in every dish.</p>
+    </div>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
