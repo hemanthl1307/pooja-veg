@@ -24,7 +24,7 @@ Designed to showcase catering services and allow users to easily send inquiries 
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 * HTML5
 * CSS3 (Flexbox, Responsive Design)
@@ -32,19 +32,19 @@ Designed to showcase catering services and allow users to easily send inquiries 
 
 ---
 
-## 📬 Contact Form Integration
+## Contact Form Integration
 
 The contact form redirects user input directly to WhatsApp with a pre-filled message.
 
 ---
 
-## 🌐 Live Demo
+## Live Demo
 
 👉 https://poojaveg.vercel.app
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── index.html
