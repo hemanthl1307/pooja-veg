@@ -4,91 +4,355 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Pooja Veg</title>
 </head>
 <body>
-    <!-----------------NAVBAR-------------->
-    <nav>
-        <ul class="sidebar">
-            <li><a href="#">Pooja<i class="fa-solid fa-utensils"></i> Veg</a></li>
-            <li onclick="hideSidebar()"><a href="#" id="cross"><i class="fa-solid fa-xmark close-icon"></i></a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Catering</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a>
-                <select class="lan">
-                <option value="eng">ENG</option>
-                <option value="kan">KAN</option>
-                </select>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <ul class="sidebar" id="sidebar">
+            <li class="sidebar-logo"><a href="#home">Pooja <i class="fa-solid fa-utensils"></i> Veg</a></li>
+            <li onclick="hideSidebar()" class="close-btn"><a href="#"><i class="fa-solid fa-xmark close-icon"></i></a></li>
+            <li><a href="#home" onclick="hideSidebar()">Home</a></li>
+            <li><a href="#menu" onclick="hideSidebar()">Menu</a></li>
+            <li><a href="#services" onclick="hideSidebar()">Catering</a></li>
+            <li><a href="#contact" onclick="hideSidebar()">Contact</a></li>
+            <li>
+                <a>
+                    <select class="lan">
+                        <option value="eng">ENG</option>
+                        <option value="kan">KAN</option>
+                    </select>
                 </a>
             </li>
         </ul>
-          <ul>
-            <li><a href="#">Pooja <i class="fa-solid fa-utensils"></i> Veg</a></li>
-            <li class="hideonMobile"><a href="#">Home</a></li>
-            <li class="hideonMobile"><a href="#">Menu</a></li>
-            <li class="hideonMobile"><a href="#">Catering</a></li>
-            <li class="hideonMobile"><a href="#">Contact</a></li>
+        <ul class="nav-main">
+            <li class="nav-logo"><a href="#home">Pooja <i class="fa-solid fa-utensils"></i> Veg</a></li>
+            <li class="hideonMobile"><a href="#home">Home</a></li>
+            <li class="hideonMobile"><a href="#menu">Menu</a></li>
+            <li class="hideonMobile"><a href="#services">Catering</a></li>
+            <li class="hideonMobile"><a href="#contact">Contact</a></li>
             <li class="menu-button" onclick="showsidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
-            <li><a>
-                <select>
-                <option value="eng">ENG</option>
-                <option value="kan">KAN</option>
-                </select>
+            <li>
+                <a>
+                    <select>
+                        <option value="eng">ENG</option>
+                        <option value="kan">KAN</option>
+                    </select>
                 </a>
             </li>
         </ul>
     </nav>
-    <!------------------HERO SECTION------------>
-    <section class="hero">
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
+            <p class="hero-tag">Pure Vegetarian • Bengaluru</p>
+        </div>
+        <div class="hero-scroll-hint">
+            <span>Scroll</span>
+            <i class="fa-solid fa-chevron-down"></i>
         </div>
     </section>
-    <!------------------INFORMATION SECTION--------->
+
+    <!-- INFORMATION SECTION -->
     <section class="catering" id="cateringSection">
-    <div class="info">
-        <h1>
-            <span id="typeLine1"></span><br>
-            <span id="typeLine2"></span></h1>
-        <h2>Bringing the rich flavors of tradition to your weddings, celebrations, and special occasions.</h2>
-        <p id="fadeParagraph">Pooja Grand is a trusted name for pure vegetarian catering services in Bengaluru. With years of experience in serving authentic South Indian cuisine, we proudly cater to Weddings, Housewarming ceremonies, Corporate events, Birthday parties, Festivals, Religious functions, and Special family gatherings.
-We understand that every event is special. That’s why we offer carefully planned and customizable menus to suit your occasion, guest count, and budget. From traditional Karnataka-style meals served on banana leaves to modern buffet arrangements, we ensure quality, taste, and presentation in every dish.</p>
-    </div>
+        <div class="info">
+            <h1>
+                <span id="typeLine1"></span><br>
+                <span id="typeLine2"></span>
+            </h1>
+            <h2 id="subheading">Bringing the rich flavors of tradition to your weddings, celebrations, and special occasions.</h2>
+            <p id="fadeParagraph">Pooja Veg is a trusted name for pure vegetarian catering services in Bengaluru. With years of experience in serving authentic South Indian cuisine, we proudly cater to Weddings, Housewarming ceremonies, Corporate events, Birthday parties, Festivals, Religious functions, and Special family gatherings.</p>
+        </div>
     </section>
-    <!-------------------OUR SERVICE --------------------->
-    <section class="services">
-    <h2>Our services</h2>
-    <p class="subtitle">
-    We deliver clean, hygienic, and professionally managed catering services for weddings,Housewarming ceremonies<br> baby showers, birthday celebrations,Corporate events & office parties,Religious functions & poojas and many more
-</p>
 
-    <div class="services-row">
-
-        <div class="service-card">
-            <img src="birthday.jpg" alt="Birthday Catering">
+    <!-- MENU SECTION -->
+    <section class="menu-section" id="menu">
+        <div class="menu-header">
+            <p class="section-tag">Our Offerings</p>
+            <h2 class="menu-title">Explore Our <span>Menu</span></h2>
+            <p class="menu-subtitle">Crafted with tradition, served with love — pure vegetarian delicacies for every occasion.</p>
         </div>
 
-        <div class="service-card">
-            <img src="wedding.jpg" alt="Wedding Catering">
+        <!-- Tab Buttons -->
+        <div class="menu-tabs">
+            <button class="tab-btn active" data-tab="south-indian">South Indian</button>
+            <button class="tab-btn" data-tab="north-indian">North Indian</button>
+            <button class="tab-btn" data-tab="sweets"> Sweets & Desserts</button>
         </div>
 
-        <div class="service-card">
-            <img src="babyshower2.jpg" alt="Babyshower">
+        <!-- Tab Contents -->
+        <div class="menu-content">
+
+            <!-- South Indian -->
+            <div class="tab-pane active" id="south-indian">
+                <div class="menu-grid">
+                    <div class="menu-category">
+                        <h3><i class="fa-solid fa-fire-flame-curved"></i> Rice & Main</h3>
+                        <ul>
+                            <li><span>Steamed Rice</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Sambar</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Rasam</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Bisibelebath</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Lemon Rice</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Puliyogare</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Curd Rice</span><span class="dots"></span><span class="Included">Included</span></li>
+                        </ul>
+                    </div>
+                    <div class="menu-category">
+                        <h3><i class="fa-solid fa-bread-slice"></i> Tiffins & Starters</h3>
+                        <ul>
+                            <li><span>Masala Dosa</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Idli (4 pcs)</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Vade </span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Upittu</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Set Dosa</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Rava Idli (3 pcs)</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Akki Rotti</span><span class="dots"></span><span class="Included">Included</span></li>
+                        </ul>
+                    </div>
+                    <div class="menu-category">
+                        <h3><i class="fa-solid fa-leaf"></i> Curries & Sides</h3>
+                        <ul>
+                            <li><span>Palya (Seasonal)</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Gojju</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Pappad</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Pickle (2 types)</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Majjige Huli</span><span class="dots"></span><span class="Included">Included</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="menu-note"><i class="fa-solid fa-circle-info"></i> Full South Indian meals include rice, 2 curries, sambar, rasam, palya, pappad & pickle. Banana leaf serving available on request.</p>
+            </div>
+
+            <!-- North Indian -->
+            <div class="tab-pane" id="north-indian">
+                <div class="menu-grid">
+                    <div class="menu-category">
+                        <h3><i class="fa-solid fa-fire-flame-curved"></i> Breads & Main</h3>
+                        <ul>
+                            <li><span>Butter Naan</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Tandoori Roti</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>SParatha</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Puri (4 pcs)</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Jeera Rice</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Vegetable Biryani</span><span class="dots"></span><span class="Included">Included</span></li>
+                        </ul>
+                    </div>
+                    <div class="menu-category">
+                        <h3><i class="fa-solid fa-bowl-food"></i> Gravies & Curries</h3>
+                        <ul>
+                            <li><span>Paneer Butter Masala</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Dal Makhani</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Chana Masala</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Palak Paneer</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Aloo Gobi</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Mixed Veg Curry</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Rajma Masala</span><span class="dots"></span><span class="Included">Included</span></li>
+                        </ul>
+                    </div>
+                    <div class="menu-category">
+                        <h3><i class="fa-solid fa-pepper-hot"></i> Starters & Chaat</h3>
+                        <ul>
+                            <li><span>Paneer Tikka</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Veg Seekh Kebab</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Samosa (2 pcs)</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Pani Puri</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Bhel Puri</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Dahi Vada</span><span class="dots"></span><span class="Included">Included</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="menu-note"><i class="fa-solid fa-circle-info"></i> Custom thali packages available for large events. Minimum order of 50 plates required for North Indian buffet setup.</p>
+            </div>
+
+            <!-- Sweets -->
+            <div class="tab-pane" id="sweets">
+                <div class="menu-grid">
+                    <div class="menu-category">
+                        <h3><i class="fa-solid fa-cake-candles"></i> Traditional Sweets</h3>
+                        <ul>
+                            <li><span>Holige(Obbatu)</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Mysore Pak</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Besan Ladoo</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Motichoor Ladoo</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Halwa (Suji/Carrot)</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Jamoon (2 pcs)</span><span class="dots"></span><span class="Included">Included</span></li>
+                        </ul>
+                    </div>
+                    <div class="menu-category">
+                        <h3><i class="fa-solid fa-ice-cream"></i> Payasam & Kheer</h3>
+                        <ul>
+                            <li><span>Payasa(All Types)</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Kheer(All Types)</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Pongal</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Halwa (Suji/Carrot)</span><span class="dots"></span><span class="Included">Included</span></li>
+                            <li><span>Fruit Custard</span><span class="dots"></span><span class="Included">Included</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="menu-note"><i class="fa-solid fa-circle-info"></i> All sweets are prepared fresh with pure ghee. Bulk orders for weddings and festivals available at discounted rates.</p>
+            </div>
         </div>
-        <div class="service-card">
-            <img src="festival.jpg" alt="festivals">
+
+        <!-- CTA -->
+        <div class="menu-cta">
+            <p>Want a custom menu for your event?</p>
+            <a href="#contact" class="cta-btn">Get a Free Quote <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-        <div class="service-card">
-            <img src="office.jpg" alt="Office parties">
+    </section>
+
+    <!-- SERVICES / CATERING SECTION -->
+    <section class="services" id="services">
+        <p class="section-tag light">What We Cater</p>
+        <h2 id="servicehead">Our Services</h2>
+        <p class="subtitle">We provide clean, hygienic catering for weddings, parties, corporate events, and religious functions.</p>
+        <div class="services-row">
+            <div class="service-card" data-label="Birthday Celebrations">
+                <img src="birthday.jpg" alt="Birthday Catering">
+                <div class="card-label">Birthday Celebrations</div>
+            </div>
+            <div class="service-card" data-label="Wedding Feasts">
+                <img src="wedding.jpg" alt="Wedding Catering">
+                <div class="card-label">Wedding Feasts</div>
+            </div>
+            <div class="service-card" data-label="Baby Shower">
+                <img src="babyshower2.jpg" alt="Baby Shower">
+                <div class="card-label">Baby Shower</div>
+            </div>
+            <div class="service-card" data-label="Festival Events">
+                <img src="festival.jpg" alt="Festivals">
+                <div class="card-label">Festival Events</div>
+            </div>
+            <div class="service-card" data-label="Corporate Parties">
+                <img src="office.jpg" alt="Office Parties">
+                <div class="card-label">Corporate Parties</div>
+            </div>
+            <div class="service-card" data-label="Housewarming">
+                <img src="housewarming1.jpg" alt="Housewarming Catering">
+                <div class="card-label">Housewarming</div>
+            </div>
         </div>
-        <div class="service-card">
-            <img src="housewarming1.jpg" alt="Housewarming Catering">
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+        <div class="contact-inner">
+            <div class="contact-left">
+                <p class="section-tag">Get In Touch</p>
+                <h2>Book Your <span>Catering</span></h2>
+                <p class="contact-desc">Ready to make your event unforgettable? Fill out the form and our team will get back to you within 24 hours with a custom quote.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <strong>Call Us</strong>
+                            <span>+91 9845146394 / 6361490658</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <strong>Email Us</strong>
+                            <span>poojaveg12@gamil.com</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Location</strong>
+                            <span>Coles Rd, Cleveland Town, Frazer Town,<br>Bengaluru, Karnataka</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <span>+91 9845146394 / 6361490658</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="your@email.com">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="event">Event Type</label>
+                            <select id="event" required>
+                                <option value="" disabled selected>Select event</option>
+                                <option>Wedding</option>
+                                <option>Birthday</option>
+                                <option>Housewarming</option>
+                                <option>Baby Shower</option>
+                                <option>Corporate Event</option>
+                                <option>Festival</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">No. of Guests</label>
+                            <input type="number" id="guests" placeholder="e.g. 150" min="10" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Event Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Requirements</label>
+                        <textarea id="message" rows="4" placeholder="Tell us about special dietary needs, theme, venue, etc."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        Send Inquiry <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    <p class="form-success" id="formSuccess">
+                        <i class="fa-solid fa-circle-check"></i> Thank you! We'll contact you shortly.
+                    </p>
+                </form>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span id="name1">Pooja <i class="fa-solid fa-utensils"></i> Veg</span>
+                <p>Pure vegetarian catering, crafted with tradition.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#services">Catering</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <p class="footer-copy">© 2025 Pooja Grand. All rights reserved.<br><i class="fa-solid fa-heart"></i> Made by Hemanth L <i class="fa-solid fa-heart"></i></p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
