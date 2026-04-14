@@ -40,7 +40,7 @@ The contact form redirects user input directly to WhatsApp with a pre-filled mes
 
 ## Live Demo
 
-👉 https://poojaveg.vercel.app
+👉 https://pooja-veg.vercel.app/
 
 ---
 
